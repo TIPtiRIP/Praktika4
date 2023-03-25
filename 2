@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Prktika4_2
+{
+    class Otpravka
+    {
+        public string Description
+        {
+            get;
+            private set;
+        }
+        public int Weight
+        {
+            get;
+            private set;
+        }
+        public Otpravka(string description, int weight)
+        {
+            Description = description;
+            Weight = weight;
+        }
+    }
+    class OTPR
+    {
+        private static int LimitWeight;
+        private const int Limit = 10;
+        public void OTravka(OTPR otpr)
+        {
+            LimitWeight += OTPR.Weight;
+            if (LimitWeight >= Limit)
+            {
+                Console.WriteLine("Ошибка! Вес отправленных посылок превысил лимит, отправка прервана.");
+            }
+            else
+            {
+                Console.WriteLine("{0} весом {1} кг успешно отправлена.", OTPR.Description, OTPR.Weight);
+            }
+        }
+    }
+}
