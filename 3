@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Prktika4_3
+{
+    class ORK
+    {
+        private static int Dobu;
+        public static int Zoloto
+        {
+            get;
+            private set;
+        }
+        public int Gold
+        {
+            get;
+            private set;
+        }
+        public ORK()
+        {
+            Dobu++;
+            Zoloto += 2;
+            if (Dobu > 5)
+            {
+                Gold += 2;
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ORK ork_1 = new ORK();
+            Console.WriteLine(ORK.Zoloto);
+            ORK ork_2 = new ORK();
+            ORK ork_3 = new ORK();
+            Console.WriteLine(ORK.Zoloto);
+            ORK ork_4 = new ORK();
+            ORK ork_5 = new ORK();
+            ORK ork_6 = new ORK();
+            Console.WriteLine(ORK_6.Zoloto);
+            Console.ReadKey(true);
+        }
+    }
+}
